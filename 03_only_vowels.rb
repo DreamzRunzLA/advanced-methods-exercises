@@ -3,22 +3,22 @@
 # The method should return false otherwise.
 
 def only_vowels?(str)
-    flag = true
     arrString = str.split('')
-    arrString.all? do |char|
+    arrString.each do |char|
         if ['a', 'e', 'i', 'o', 'u'].include?(char) == false
-            flag = false
+            return false
         else
             next
         end
     end
-    return flag
+    return true
 end
 
-# p only_vowels?("aaoeee")  # => true
-# p only_vowels?("iou")     # => true
-# p only_vowels?("cat")     # => false
-# p only_vowels?("over")    # => false
-# p only_vowels?("ghthghtghthgyuo")    # => false
-# p only_vowels?("ghthghtghthg")    # => false
-# p only_vowels?("uuuuuuuuuaei")    # => true
+
+p only_vowels?("aaoeee")  # => true
+p only_vowels?("iou")     # => true
+p only_vowels?("cat")     # => false
+p only_vowels?("over")    # => false
+p only_vowels?("ghthghtghthgyuo")    # => false
+p only_vowels?("ghthghtghthg")    # => false
+p only_vowels?("uuuuuuuuuaei")    # => true
